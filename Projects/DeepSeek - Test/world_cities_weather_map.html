@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b0affa8e054f09cdc5b4755548f95df4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b0affa8e054f09cdc5b4755548f95df4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b0affa8e054f09cdc5b4755548f95df4 = L.map(
+                "map_b0affa8e054f09cdc5b4755548f95df4",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d21c144e8fc99f28426cf3db3ee5be5a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d21c144e8fc99f28426cf3db3ee5be5a.addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+            var marker_d1a02dedab6723807b6b4ee92ddaa943 = L.marker(
+                [40.7128, -74.006],
+                {
+}
+            ).addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+        var popup_4606505b480d4a8fb62d5adb264d31e1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0ebe011f00fe53dd74a7a490f3b54c14 = $(`<div id="html_0ebe011f00fe53dd74a7a490f3b54c14" style="width: 100.0%; height: 100.0%;"><b>New York</b><br>Weather: scattered clouds, Temperature: 4.95°C</div>`)[0];
+                popup_4606505b480d4a8fb62d5adb264d31e1.setContent(html_0ebe011f00fe53dd74a7a490f3b54c14);
+            
+        
+
+        marker_d1a02dedab6723807b6b4ee92ddaa943.bindPopup(popup_4606505b480d4a8fb62d5adb264d31e1)
+        ;
+
+        
+    
+    
+            marker_d1a02dedab6723807b6b4ee92ddaa943.bindTooltip(
+                `<div>
+                     Click for New York weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d973e38a2c9fdb6496b60e26f07d75bf = L.marker(
+                [51.5074, -0.1278],
+                {
+}
+            ).addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+        var popup_2ebdf4439c6f1a0943b8cdad302413cd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9c6d38ed5777eddb287f3c023c355bcc = $(`<div id="html_9c6d38ed5777eddb287f3c023c355bcc" style="width: 100.0%; height: 100.0%;"><b>London</b><br>Weather: light rain, Temperature: 8.53°C</div>`)[0];
+                popup_2ebdf4439c6f1a0943b8cdad302413cd.setContent(html_9c6d38ed5777eddb287f3c023c355bcc);
+            
+        
+
+        marker_d973e38a2c9fdb6496b60e26f07d75bf.bindPopup(popup_2ebdf4439c6f1a0943b8cdad302413cd)
+        ;
+
+        
+    
+    
+            marker_d973e38a2c9fdb6496b60e26f07d75bf.bindTooltip(
+                `<div>
+                     Click for London weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_379c6e25f832f87391b1ef02bcfd3b4a = L.marker(
+                [35.6895, 139.6917],
+                {
+}
+            ).addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+        var popup_2b92bf58ecfa2637fef1a93ac92a7c04 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_78f69de0aedc03847ccf7a54a615d40b = $(`<div id="html_78f69de0aedc03847ccf7a54a615d40b" style="width: 100.0%; height: 100.0%;"><b>Tokyo</b><br>Weather: broken clouds, Temperature: 6.86°C</div>`)[0];
+                popup_2b92bf58ecfa2637fef1a93ac92a7c04.setContent(html_78f69de0aedc03847ccf7a54a615d40b);
+            
+        
+
+        marker_379c6e25f832f87391b1ef02bcfd3b4a.bindPopup(popup_2b92bf58ecfa2637fef1a93ac92a7c04)
+        ;
+
+        
+    
+    
+            marker_379c6e25f832f87391b1ef02bcfd3b4a.bindTooltip(
+                `<div>
+                     Click for Tokyo weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8835264bcf10eaee47f254c3f91ae953 = L.marker(
+                [-33.8688, 151.2093],
+                {
+}
+            ).addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+        var popup_4d2180613d33e3baba565792ac67eeab = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a81d0e0febd9e794b3d5d1745ed350ea = $(`<div id="html_a81d0e0febd9e794b3d5d1745ed350ea" style="width: 100.0%; height: 100.0%;"><b>Sydney</b><br>Weather: broken clouds, Temperature: 19.81°C</div>`)[0];
+                popup_4d2180613d33e3baba565792ac67eeab.setContent(html_a81d0e0febd9e794b3d5d1745ed350ea);
+            
+        
+
+        marker_8835264bcf10eaee47f254c3f91ae953.bindPopup(popup_4d2180613d33e3baba565792ac67eeab)
+        ;
+
+        
+    
+    
+            marker_8835264bcf10eaee47f254c3f91ae953.bindTooltip(
+                `<div>
+                     Click for Sydney weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d27c9c8e2ce20b5b18262d02c23c4146 = L.marker(
+                [48.8566, 2.3522],
+                {
+}
+            ).addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+        var popup_2c0f28e5979fcb28978e599d918a05a3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3ba9ce3f9ed2e82d7ff9176cb7f866a0 = $(`<div id="html_3ba9ce3f9ed2e82d7ff9176cb7f866a0" style="width: 100.0%; height: 100.0%;"><b>Paris</b><br>Weather: broken clouds, Temperature: 10.61°C</div>`)[0];
+                popup_2c0f28e5979fcb28978e599d918a05a3.setContent(html_3ba9ce3f9ed2e82d7ff9176cb7f866a0);
+            
+        
+
+        marker_d27c9c8e2ce20b5b18262d02c23c4146.bindPopup(popup_2c0f28e5979fcb28978e599d918a05a3)
+        ;
+
+        
+    
+    
+            marker_d27c9c8e2ce20b5b18262d02c23c4146.bindTooltip(
+                `<div>
+                     Click for Paris weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cd62f9c788ed5d23f402e52adaf429ee = L.marker(
+                [52.52, 13.405],
+                {
+}
+            ).addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+        var popup_7e911f5b8b61e5dc8159ea75cd79b4db = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ca8d8f91fb65517790b60c2b6d9fccfd = $(`<div id="html_ca8d8f91fb65517790b60c2b6d9fccfd" style="width: 100.0%; height: 100.0%;"><b>Berlin</b><br>Weather: moderate rain, Temperature: 7.19°C</div>`)[0];
+                popup_7e911f5b8b61e5dc8159ea75cd79b4db.setContent(html_ca8d8f91fb65517790b60c2b6d9fccfd);
+            
+        
+
+        marker_cd62f9c788ed5d23f402e52adaf429ee.bindPopup(popup_7e911f5b8b61e5dc8159ea75cd79b4db)
+        ;
+
+        
+    
+    
+            marker_cd62f9c788ed5d23f402e52adaf429ee.bindTooltip(
+                `<div>
+                     Click for Berlin weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0bf43a111d43fa34a027c37bc28f0747 = L.marker(
+                [55.7558, 37.6173],
+                {
+}
+            ).addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+        var popup_244779f79e9401ddcb892eb760ba4bcd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fa8fea071e98f9bd45fc7e9102c1e56f = $(`<div id="html_fa8fea071e98f9bd45fc7e9102c1e56f" style="width: 100.0%; height: 100.0%;"><b>Moscow</b><br>Weather: overcast clouds, Temperature: 4.26°C</div>`)[0];
+                popup_244779f79e9401ddcb892eb760ba4bcd.setContent(html_fa8fea071e98f9bd45fc7e9102c1e56f);
+            
+        
+
+        marker_0bf43a111d43fa34a027c37bc28f0747.bindPopup(popup_244779f79e9401ddcb892eb760ba4bcd)
+        ;
+
+        
+    
+    
+            marker_0bf43a111d43fa34a027c37bc28f0747.bindTooltip(
+                `<div>
+                     Click for Moscow weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5edaa809e3548d0c1ac1c589c2a6a25f = L.marker(
+                [39.9042, 116.4074],
+                {
+}
+            ).addTo(map_b0affa8e054f09cdc5b4755548f95df4);
+        
+    
+        var popup_ae0c287da2ee9c60b0396e9256b9b382 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b405a29c77d5ab176e4266984c90322a = $(`<div id="html_b405a29c77d5ab176e4266984c90322a" style="width: 100.0%; height: 100.0%;"><b>Beijing</b><br>Weather: clear sky, Temperature: -12.08°C</div>`)[0];
+                popup_ae0c287da2ee9c60b0396e9256b9b382.setContent(html_b405a29c77d5ab176e4266984c90322a);
+            
+        
+
+        marker_5edaa809e3548d0c1ac1c589c2a6a25f.bindPopup(popup_ae0c287da2ee9c60b0396e9256b9b382)
+        ;
+
+        
+    
+    
+            marker_5edaa809e3548d0c1ac1c589c2a6a25f.bindTooltip(
+                `<div>
+                     Click for Beijing weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

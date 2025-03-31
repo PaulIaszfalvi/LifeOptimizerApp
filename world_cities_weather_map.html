@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b2a330a47dcffafae8ed3c5424bda73a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b2a330a47dcffafae8ed3c5424bda73a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b2a330a47dcffafae8ed3c5424bda73a = L.map(
+                "map_b2a330a47dcffafae8ed3c5424bda73a",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fc110f315bcaf15f7238e4532c21a3a9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fc110f315bcaf15f7238e4532c21a3a9.addTo(map_b2a330a47dcffafae8ed3c5424bda73a);
+        
+    
+            var marker_e4c7fb6bd23d31254ad92f0d75016668 = L.marker(
+                [40.7128, -74.006],
+                {
+}
+            ).addTo(map_b2a330a47dcffafae8ed3c5424bda73a);
+        
+    
+        var popup_ea392f2e99b821bca2fe8eaf4d99c40c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1d45c49f6e781569cf19a0abaa41de7b = $(`<div id="html_1d45c49f6e781569cf19a0abaa41de7b" style="width: 100.0%; height: 100.0%;"><b>New York</b><br>Weather data unavailable</div>`)[0];
+                popup_ea392f2e99b821bca2fe8eaf4d99c40c.setContent(html_1d45c49f6e781569cf19a0abaa41de7b);
+            
+        
+
+        marker_e4c7fb6bd23d31254ad92f0d75016668.bindPopup(popup_ea392f2e99b821bca2fe8eaf4d99c40c)
+        ;
+
+        
+    
+    
+            marker_e4c7fb6bd23d31254ad92f0d75016668.bindTooltip(
+                `<div>
+                     Hover for New York weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_64e52003d34fedd6b51263b99d187467 = L.marker(
+                [51.5074, -0.1278],
+                {
+}
+            ).addTo(map_b2a330a47dcffafae8ed3c5424bda73a);
+        
+    
+        var popup_67e8f3f734b17511d256df0d6120ac99 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_25b044e813054afa9ff940791ad0d801 = $(`<div id="html_25b044e813054afa9ff940791ad0d801" style="width: 100.0%; height: 100.0%;"><b>London</b><br>Weather data unavailable</div>`)[0];
+                popup_67e8f3f734b17511d256df0d6120ac99.setContent(html_25b044e813054afa9ff940791ad0d801);
+            
+        
+
+        marker_64e52003d34fedd6b51263b99d187467.bindPopup(popup_67e8f3f734b17511d256df0d6120ac99)
+        ;
+
+        
+    
+    
+            marker_64e52003d34fedd6b51263b99d187467.bindTooltip(
+                `<div>
+                     Hover for London weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0b570dd6fd386362da74b3caf30896d3 = L.marker(
+                [35.6895, 139.6917],
+                {
+}
+            ).addTo(map_b2a330a47dcffafae8ed3c5424bda73a);
+        
+    
+        var popup_df1c0d995b163980a2cb1d98402cac09 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_828a28b785af533da267d40f88a90304 = $(`<div id="html_828a28b785af533da267d40f88a90304" style="width: 100.0%; height: 100.0%;"><b>Tokyo</b><br>Weather data unavailable</div>`)[0];
+                popup_df1c0d995b163980a2cb1d98402cac09.setContent(html_828a28b785af533da267d40f88a90304);
+            
+        
+
+        marker_0b570dd6fd386362da74b3caf30896d3.bindPopup(popup_df1c0d995b163980a2cb1d98402cac09)
+        ;
+
+        
+    
+    
+            marker_0b570dd6fd386362da74b3caf30896d3.bindTooltip(
+                `<div>
+                     Hover for Tokyo weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ab661bc8b8528a2877bbff6e3954c2ac = L.marker(
+                [-33.8688, 151.2093],
+                {
+}
+            ).addTo(map_b2a330a47dcffafae8ed3c5424bda73a);
+        
+    
+        var popup_4963aaa58da04588690f3a17d0b12287 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c6d6cc74803c47223fe76c4710303c40 = $(`<div id="html_c6d6cc74803c47223fe76c4710303c40" style="width: 100.0%; height: 100.0%;"><b>Sydney</b><br>Weather data unavailable</div>`)[0];
+                popup_4963aaa58da04588690f3a17d0b12287.setContent(html_c6d6cc74803c47223fe76c4710303c40);
+            
+        
+
+        marker_ab661bc8b8528a2877bbff6e3954c2ac.bindPopup(popup_4963aaa58da04588690f3a17d0b12287)
+        ;
+
+        
+    
+    
+            marker_ab661bc8b8528a2877bbff6e3954c2ac.bindTooltip(
+                `<div>
+                     Hover for Sydney weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d6cb05a36639d4ac538e821989b13b62 = L.marker(
+                [48.8566, 2.3522],
+                {
+}
+            ).addTo(map_b2a330a47dcffafae8ed3c5424bda73a);
+        
+    
+        var popup_d045ea02564363e0ebcd7464880b0016 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3f4f5f23a87dd507078a32f12a43791d = $(`<div id="html_3f4f5f23a87dd507078a32f12a43791d" style="width: 100.0%; height: 100.0%;"><b>Paris</b><br>Weather data unavailable</div>`)[0];
+                popup_d045ea02564363e0ebcd7464880b0016.setContent(html_3f4f5f23a87dd507078a32f12a43791d);
+            
+        
+
+        marker_d6cb05a36639d4ac538e821989b13b62.bindPopup(popup_d045ea02564363e0ebcd7464880b0016)
+        ;
+
+        
+    
+    
+            marker_d6cb05a36639d4ac538e821989b13b62.bindTooltip(
+                `<div>
+                     Hover for Paris weather
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
