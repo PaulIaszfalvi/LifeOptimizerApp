@@ -29,4 +29,13 @@ export class ClockDisplayComponent implements OnInit {
         this.cdr.markForCheck();
       });
   }
+
+  toggleFullscreen(): void {
+    const element = document.documentElement;
+    if (!document.fullscreenElement) {
+      element.requestFullscreen().catch(err => console.error(err));
+    } else {
+      document.exitFullscreen().catch(err => console.error(err));
+    }
+  }
 }
