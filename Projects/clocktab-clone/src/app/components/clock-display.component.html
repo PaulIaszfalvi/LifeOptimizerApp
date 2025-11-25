@@ -1,11 +1,12 @@
 <div class="clock-container">
   <div class="clock-content">
     <div class="time-display">
-      <span class="time">{{ time.time }}</span>
-      <span class="period">{{ time.period }}</span>
+      <span class="time">{{ displayTime }}</span>
+      <div class="right-group">
+        <div class="period">{{ period }}</div>
+        <span class="seconds">{{ seconds }}</span>
+      </div>
     </div>
-    <div class="date-display">
-      {{ date }}
-    </div>
+    <div class="date-display">{{ fullDate }}</div>
   </div>
 </div>
