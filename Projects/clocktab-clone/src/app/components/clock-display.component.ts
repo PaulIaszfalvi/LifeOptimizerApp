@@ -1,52 +1,32 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ClockService } from '../services/clock.service';
 
 @Component({
   selector: 'app-clock-display',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './clock-display.component.html',
-  styleUrl: './clock-display.component.scss'
+  styleUrl: './clock-display.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ClockDisplayComponent implements OnInit, OnDestroy {
+export class ClockDisplayComponent implements OnInit {
   displayTime = '';
   seconds = '00';
   period = '';
   fullDate = '';
-  private intervalId: any;
+
+  constructor(private clockService: ClockService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    this.updateTime();
-    this.intervalId = setInterval(() => this.updateTime(), 100);
-  }
-
-  ngOnDestroy(): void {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
-  }
-
-  updateTime(): void {
-    const now = new Date();
-    const opts: Intl.DateTimeFormatOptions = {
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true,
-      timeZoneName: 'short'
-    };
-    const parts = new Intl.DateTimeFormat('en-US', opts).formatToParts(now);
-
-    const hour = parts.find(p => p.type === 'hour')!.value;
-    const minute = parts.find(p => p.type === 'minute')!.value;
-    const periodValue = parts.find(p => p.type === 'dayPeriod')!.value;
-
-    this.displayTime = `${hour}:${minute}`;
-    this.seconds = now.getSeconds().toString().padStart(2, '0');
-    this.period = periodValue.toUpperCase();
-    this.fullDate = now.toLocaleDateString('en-US', {
-      weekday: 'long',
-      month: 'long',
-      day: 'numeric'
-    }).toUpperCase();
+    this.clockService.getTime()
+      .subscribe(time => {
+        const formatted = this.clockService.formatTime(time);
+        this.displayTime = formatted.time;
+        this.seconds = formatted.seconds;
+        this.period = formatted.period;
+        this.fullDate = this.clockService.formatDate(time);
+        this.cdr.markForCheck();
+      });
   }
 }
