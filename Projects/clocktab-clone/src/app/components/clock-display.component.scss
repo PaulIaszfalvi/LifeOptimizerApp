@@ -39,11 +39,11 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0.2rem;
-  padding-top: 30px;
+  padding-top: 12px;
 }
 
 .period {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 300;
   letter-spacing: 1px;
   color: #e8e8e8;
@@ -52,7 +52,7 @@
 }
 
 .seconds {
-  font-size: 40px;
+  font-size: 56px;
   font-weight: 300;
   color: #a0a0a0;
   line-height: 1;
@@ -73,15 +73,15 @@
   }
 
   .right-group {
-    padding-top: 20px;
+    padding-top: 8px;
   }
 
   .period {
-    font-size: 24px;
+    font-size: 48px;
   }
 
   .seconds {
-    font-size: 28px;
+    font-size: 56px;
   }
 
   .date-display {
@@ -96,15 +96,15 @@
   }
 
   .right-group {
-    padding-top: 14px;
+    padding-top: 6px;
   }
 
   .period {
-    font-size: 20px;
+    font-size: 32px;
   }
 
   .seconds {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .date-display {
